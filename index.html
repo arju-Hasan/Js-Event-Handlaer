@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Events</title>
+</head>
+<body>
+   <h1>Hello dome events</h1>
+
+   <!-- Opthion one for event Handler -->
+    <button onclick="console.log(7);">Click me</button>
+    <button onclick="console.log(63);">most number</button>
+    <button onclick="console.log('I am Another Button');">another one</button>
+<br>
+
+
+    <!--  opthion secend for event Handler -->
+      <br>
+      <button onclick="makeYellow()">Make Yellow</button>
+      <button onclick="makeRed()">Make Red</button>
+
+    <!-- OPthion third for Event Handeler -->
+     <br><br><br>
+     <button id="btn-make-blue">Make Blue</button>
+    
+     <!-- Opthion 4 Event Handler  -->
+      <br><br>
+      <button id="btn-make-green">Make Green</button>
+      <button id="btn-make-gold">Make Gold</button>
+
+
+      <script>
+    // document.getElementById.addEvenLisener(Even type, Handeler)
+    document.getElementById("btn-make-green").addEventListener('click',
+        function makeGreen(){
+             document.body.style.backgroundColor = "green";
+        }
+    )
+        document.getElementById("btn-make-gold")
+            .addEventListener('click',
+                function makeGold(){
+                    document.body.style.backgroundColor = 'goldenrod';
+                }
+            )
+
+      </script>
+    <script src="js/events.js"></script>
+</body>
+</html>

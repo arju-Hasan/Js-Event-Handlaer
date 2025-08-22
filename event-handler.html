@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Handler</title>
+</head>
+<body>
+    
+<h1 id="heding-title">Walcame To Event Handler Page</h1>
+<button id="text-center">Center</button><br><br><br>
+
+<h1 id="page-title">Even Hading</h1>
+<button id="btn-update">Updat Hading</button>
+
+<p id="user-info">no user</p>
+<button id="btn-login">login</button>
+<br>
+<br>
+<br>
+<br>
+
+    <!-- Handel input Text -->
+     <p id="name">No Name</p>
+     <input id="input-name" placeholder="your name" type="text">
+    <button id="btn-name-update">Update</button>
+
+
+
+
+
+    <script>
+        document.getElementById('btn-name-update')
+        .addEventListener('click',function(){
+            // console.log("btn-name-update");
+            const inputName = document.getElementById('input-name');
+            console.log(inputName);
+            const name = inputName.value 
+            console.log('name', name);
+            // set the name 
+            const namep = document.getElementById('name');
+            namep.innerText = name;
+        })
+   
+
+
+    </script>
+    <script src="js/event-handler.js"></script>
+</body>
+</html>

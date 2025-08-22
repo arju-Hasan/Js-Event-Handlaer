@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box </title>
+    <style>
+        .comment{
+            border: 2px solid blue;
+            background-color: cadetblue;
+            margin: 10px;
+            padding: 12px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<h1> This is my Aesame Comment box. Write my mains thotes</h1>
+ <section>
+    <h3>All Comment Hear</h3>
+    <div id="comment-contaner">
+        <p class="comment">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum vel harum aperiam doloremque sed. Eveniet voluptas eos obcaecati quas harum omnis hic. Laudantium repudiandae quis quos cupiditate explicabo nemo quidem.
+        </p>
+        <p class="comment">Iusto quae tenetur, quibusdam reprehenderit, nihil debitis ipsa animi laborum temporibus nam, cupiditate officia! Laudantium maiores sed nesciunt? Minima nulla fugiat libero velit cum ipsum magnam ab voluptatum cupiditate et?
+        </p>
+        <p class="comment">Minus nesciunt aut ea ut magnam, porro, dolores cum, culpa fuga asperiores animi libero architecto atque. Ipsa ex facilis delectus, non reiciendis aliquid a, ad porro quidem in quasi nesciunt?
+        </p>
+    </div>
+    <textarea name="" id="comment-text-box" cols="60" rows="5"></textarea>
+    <br>
+    <button id="btn-post-comment">Post Comment</button>
+ </section>
+
+<script>
+  // set button 
+document.getElementById('btn-post-comment')
+.addEventListener('click',  function(){
+  // add text
+  const commentText = document.getElementById('comment-text-box')
+  const newComment =commentText.value;
+    // ste the parents the text alliement 
+    const commentContaner = document.getElementById('comment-contaner')
+    // create a comment paragrap ste the innertex
+    const commentp = document.createElement('p');
+    commentp.classList.add('comment')
+    commentp.innerText = newComment;
+    // appen the new p tag set the parent tag set the parent node 
+    commentContaner.appendChild(commentp);
+    // clear the text box 
+    commentText.value = '';
+
+})
+ 
+
+</script>
+
+    <script src="js/comment.js"></script>
+</body>
+</html>
