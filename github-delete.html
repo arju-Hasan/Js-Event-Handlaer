@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github Delete event Handler</title>
+</head>
+<body>
+    <h1 id="info-text">This is a github-delete event</h1>
+    <input id="input-delete" placeholder="write delete" type="text">
+    <button id="btn-delete" disabled >Delete</button>
+
+
+    <script>
+       document.getElementById('btn-delete').addEventListener('click', function(){
+        const infoText = document.getElementById('info-text');
+        infoText.style.display = 'none';
+       })
+    </script>
+    <script src="js/github-delete.js"></script>
+</body>
+</html>
